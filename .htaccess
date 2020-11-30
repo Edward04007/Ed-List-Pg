@@ -1,0 +1,32 @@
+# HTID:16069614: DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES BELOW
+php_value display_errors 1
+# DO NOT REMOVE OR MODIFY THIS LINE AND THE LINES ABOVE HTID:16069614:
+
+Options -Indexes
+
+<Files *.php>
+   SetOutputFilter DEFLATE
+</Files>
+<Files *.html>
+   SetOutputFilter DEFLATE
+</Files>
+<Files *.css>
+   SetOutputFilter DEFLATE
+</Files>
+<Files *.js>
+   SetOutputFilter DEFLATE
+</Files>
+<Files *.jpg>
+   SetOutputFilter DEFLATE
+</Files>
+<Files *.jpeg>
+   SetOutputFilter DEFLATE
+</Files>
+<Files *.png>
+   SetOutputFilter DEFLATE
+</Files>
+
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?https://edlist-01.000webhostapp.com/ [NC]
+RewriteRule .*\.(jpg|jpeg|png|gif)$ - [F]

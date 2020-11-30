@@ -1,0 +1,1 @@
+const video=document.querySelector(".video");function menu(e){document.querySelector(".icon1").addEventListener("click",()=>{e.classList.toggle("mostrar")}),document.querySelector(".conteudo").addEventListener("click",()=>{e.classList.remove("mostrar")})}menu(video);

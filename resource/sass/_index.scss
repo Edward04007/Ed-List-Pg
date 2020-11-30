@@ -1,0 +1,49 @@
+.menu-op{
+    width: 100%;
+    height: 1.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: $bg-color;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+    figure{
+        width: 130px;
+        height: 30px;
+        background-size: 130px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("../images/logo/logo.png");
+    }
+}
+.conteudo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 0.7em;
+    justify-content: center;
+    form{
+        display: flex;
+        margin-top: 2em;
+        align-items: center;
+        flex-direction: column;
+        input{
+            width: 95%;
+            font-size: 1.2rem;
+            margin-top: 0.4em;
+            padding-left: 0.4em;
+            color: $color-input;
+            border-radius: 0.5em;
+            background-color: $bg-input;
+            border: solid 2px $bg-border;
+        }
+        button{
+            width: 95%;
+            padding: 0.2em;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-top: 0.4em;
+            border-radius: 0.5em;
+            background-color: $bg-color-buttun;
+        }
+    }
+}

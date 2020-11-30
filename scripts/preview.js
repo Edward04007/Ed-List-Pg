@@ -1,0 +1,1 @@
+function mostrarImagem(e){if(e.target.files.length>0){var t=URL.createObjectURL(e.target.files[0]),r=document.getElementById("mostrarAqui");r.src=t,r.style.display="block"}}
