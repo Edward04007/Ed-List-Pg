@@ -24,5 +24,5 @@ Options -Indexes
 
 RewriteEngine on
 RewriteCond %{HTTP_REFERER} !^$
-RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?https://ed-list.herokuapp.com/ [NC]
+RewriteCond %{HTTP_REFERER} !^http(s)?://(www\.)?ed-list.herokuapp.com/ [NC]
 RewriteRule .*\.(jpg|jpeg|png|gif)$ - [F]
