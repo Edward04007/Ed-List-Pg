@@ -1,8 +1,16 @@
 <?php
-$host = $_ENV['HOST'];
-$user = $_ENV['USER'];
-$password = $_ENV['PASS'];
-$database = $_ENV['DBNAME'];
-$connect = pg_connect($host, $user, $password, $database);
+$host = getenv('HOST');
+$database = getenv('DBNAME');
+$user = getenv('USER');
+$password = getenv('PASS');
 
+$connect = pg_connect($host,$database, $user, $password);
+
+if($connect){
+    echo "Deu certo";
+    var_dump($connect);
+}else{
+    echo "não deu";
+    var_dump($connect);
+}
 ?>
