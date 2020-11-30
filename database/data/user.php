@@ -17,6 +17,10 @@ if(pg_num_rows($consulta) > 0){
             header('Location:../../view/geral.php');
         }
     }else{
-        header('Location:../../index.php');
+        echo$host;
+        echo$database;
+        echo$usuario;
+        echo$password;
+
     }
 ?>
