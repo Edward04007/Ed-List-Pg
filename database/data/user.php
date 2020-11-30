@@ -1,9 +1,7 @@
 <?php
 session_start();
 require_once(__DIR__."/../env/connect.php");
- echo $connect;
-?>
-<!-- $user =filter_input(INPUT_POST,'user', FILTER_SANITIZE_STRING);
+$user =filter_input(INPUT_POST,'user', FILTER_SANITIZE_STRING);
 $pass = filter_input(INPUT_POST,'pass', FILTER_SANITIZE_STRING);
 $senha_sql = sha1($pass);
 
@@ -20,4 +18,5 @@ if(pg_num_rows($consulta) > 0){
         }
     }else{
         header('Location:../../index.php');
-    } -->
+    }
+?>
