@@ -1,13 +1,13 @@
 <?php
 $host = getenv('HOST');
 $database = getenv('DBNAME');
-$user = getenv('USER');
+$user = getenv('db_user');
 $password = getenv('PASS');
 
 
 
-echo $host;
-echo $database;
-echo $user;
-echo $password;
+echo $host."<br>";
+echo $database."<br>";
+echo $user."<br>";
+echo $password."<br>";
 ?>
