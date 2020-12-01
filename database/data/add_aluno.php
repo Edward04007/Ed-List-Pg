@@ -10,7 +10,7 @@ if($_FILES['foto']){
     $dir = "../../images/perfil/";
     move_uploaded_file($_FILES['foto']['tmp_name'], $dir.$nome);
     $sql =  "INSERT INTO tb_aluno(nome, foto, senha) VALUES('$aluno_novo','$nome', '$pass')";
-    $consulta = mysqli_query($connect, $sql);
+    $consulta = pg_query($connect, $sql);
     header('Location:../../view/add.php'); 
     
   }
