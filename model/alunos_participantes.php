@@ -1,7 +1,7 @@
 <?php
 require_once("../database/env/connect.php");
 if($_SESSION['id-aluno']){
-    $sql_1 = "SELECT foto FROM aluno";
+    $sql_1 = "SELECT foto FROM tb_aluno";
     $consulta = mysqli_query($connect, $sql_1);
     if($consulta){
         while( $row = mysqli_fetch_assoc($consulta)){

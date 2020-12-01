@@ -9,7 +9,7 @@ if($_FILES['foto']){
     $nome = rand(10000, 90000000).$tipo_arquivo;
     $dir = "../../images/perfil/";
     move_uploaded_file($_FILES['foto']['tmp_name'], $dir.$nome);
-    $sql =  "INSERT INTO aluno(nome, foto, senha) VALUES('$aluno_novo','$nome', '$pass')";
+    $sql =  "INSERT INTO tb_aluno(nome, foto, senha) VALUES('$aluno_novo','$nome', '$pass')";
     $consulta = mysqli_query($connect, $sql);
     header('Location:../../view/add.php'); 
     
