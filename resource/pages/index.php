@@ -3,7 +3,7 @@
 <head lang="pt-BR">
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <meta property="og:image" content="https://edlist-01.000webhostapp.com/images/logo/ico.png">
+    <meta property="og:image" content="https://ed-list.herokuapp.com/images/logo/ico.png">
     <meta name="description" content="Tenha um maior controle sobre as suas atividades">
     <meta name="author" content="Éverton - Ed">
     <meta name="copyright" content="© 2020 EdList">
