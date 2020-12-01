@@ -2,7 +2,7 @@
 require_once(__DIR__."/../database/env/connect.php");
 if($_SESSION['id-aluno']){
     $aluno = $_SESSION['id-aluno'];
-    $code_sql = "SELECT l.'pk_lista', d.materia, an.url, an.data_entrega from tb_lista l JOIN tb_disciplina d ON l.fk_disciplina = d.pk_disciplina JOIN tb_anexo an ON l.fk_anexo = an.pk_anexo WHERE l.fk_status = '1' AND l.fk_aluno = '$aluno'";
+    $code_sql = "SELECT l.pk_lista, d.materia, an.url, an.data_entrega from tb_lista l JOIN tb_disciplina d ON l.fk_disciplina = d.pk_disciplina JOIN tb_anexo an ON l.fk_anexo = an.pk_anexo WHERE l.fk_status = '1' AND l.fk_aluno = '$aluno'";
     $consulta = pg_query($connect, $code_sql);
     if($consulta){
         while( $row= pg_fetch_array($consulta)){
