@@ -11,7 +11,7 @@ if(pg_num_rows($consulta) > 0){
     $sql = "SELECT senha, pk_aluno, nome, foto FROM tb_aluno WHERE nome = '$user' AND senha = '$senha_sql'";
     $consulta = pg_query($connect, $sql);
         if($row = pg_fetch_array($consulta)){
-            $_SESSION['id-aluno'] = $row['id'];
+            $_SESSION['id-aluno'] = $row['pk_aluno'];
             $_SESSION['nome-aluno'] = $row['nome'];
             $_SESSION['foto-aluno'] = $row['foto'];
             header('Location:../../view/geral.php');
