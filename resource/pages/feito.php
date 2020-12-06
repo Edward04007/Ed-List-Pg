@@ -19,6 +19,7 @@
     <link rel='stylesheet' type='text/css' media='screen' href='../styles/main_2.css'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel='manifest' href='../manifest.json'>
     <script src="https://kit.fontawesome.com/8544c965ee.js" crossorigin="anonymous"></script>
     <script src='../scripts/menu.js' defer></script>
  </head>
