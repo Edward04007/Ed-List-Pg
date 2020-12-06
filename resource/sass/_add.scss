@@ -80,9 +80,9 @@
         border-radius: 0.5em;
         background-color: $bg-color-buttun;
     }
-    &:not(:first-child) {
-        margin-bottom: 2em;
-    }
+}
+form:not(:first-child) {
+    margin-bottom: 2em;
 }
 .menu{
     bottom: 0px;
