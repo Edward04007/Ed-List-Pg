@@ -9,7 +9,6 @@
     <meta name="author" content="Éverton - Ed">
     <meta name="copyright" content="© 2020 EdList">
     <title>Administração - EdList</title>
-    <link rel='manifest' href='../manifest.json'>
     <link rel="icon" sizes="144x144" href="../images/favicon/favicon-144.png">
     <link rel="icon" sizes="128x128" href="../images/favicon/favicon-128.png">
     <link rel="icon" sizes="96x96" href="../images/favicon/favicon-96.png">
@@ -23,7 +22,6 @@
     <script src="https://kit.fontawesome.com/8544c965ee.js" crossorigin="anonymous"></script>
     <script src='../scripts/menu.js' defer></script>
     <script src='../scripts/preview.js' defer></script>
-    <script type="module" src="../pwabuilder-sw-register.js" defer></script>
 </head>
 <body>
     <nav class="menu-op">
