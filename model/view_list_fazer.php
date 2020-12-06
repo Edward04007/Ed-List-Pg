@@ -16,7 +16,7 @@ if($_SESSION['id-aluno']){
                                     "<p>Entregar</p>".
                                 "</div>".
                                 "<div>".
-                                    "<a target='_blank' href='".$row['url']."'>Visualizar</a>"
+                                    "<a target='_blank' rel='external' href='".$row['url']."'>Visualizar</a>"
                                     ."<p>".$row['data_entrega']."</p>"
                                 ."</div>".
                             "</div>".

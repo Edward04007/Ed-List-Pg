@@ -1,7 +1,7 @@
 <?php session_start();?>
 <!DOCTYPE html>
-<html>
-<head lang="pt-BR">
+<html lang="pt-BR">
+<head>
     <meta charset='utf-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <meta property="og:image" content="https://ed-list.herokuapp.com/images/logo/ico.png">
@@ -9,17 +9,21 @@
     <meta name="author" content="Éverton - Ed">
     <meta name="copyright" content="© 2020 EdList">
     <title>Administração - EdList</title>
-    <link rel="icon" href="../images/favicon/favicon-128.png">
-    <link rel="icon" href="../images/favicon/favicon-64.png">
-    <link rel="icon" href="../images/favicon/favicon-48.png">
-    <link rel="icon" href="../images/favicon/favicon-32.png">
-    <link rel="icon" href="../images/favicon/favicon-16.png">
+    <link rel='manifest' href='../manifest.json'>
+    <link rel="icon" sizes="144x144" href="../images/favicon/favicon-144.png">
+    <link rel="icon" sizes="128x128" href="../images/favicon/favicon-128.png">
+    <link rel="icon" sizes="96x96" href="../images/favicon/favicon-96.png">
+    <link rel="icon" sizes="64x64" href="../images/favicon/favicon-64.png">
+    <link rel="icon" sizes="48x48" href="../images/favicon/favicon-48.png">
+    <link rel="icon" sizes="32x32" href="../images/favicon/favicon-32.png">
+    <link rel="icon" sizes="16x16" href="../images/favicon/favicon-16.png">
     <link rel='stylesheet' type='text/css' media='screen' href='../styles/main_4.css'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8544c965ee.js" crossorigin="anonymous"></script>
     <script src='../scripts/menu.js' defer></script>
     <script src='../scripts/preview.js' defer></script>
+    <script type="module" src="https://ed-list.herokuapp.com/pwabuilder-sw-register.js" defer></script>
 </head>
 <body>
     <nav class="menu-op">
@@ -62,7 +66,7 @@
                 <?php echo $icon?>
                 <li class="fas fa-video icon1"></li>
                 <?php echo "$al";?>
-                <a class="fas fa-house-user" href="./geral.php"></a>
+                <a  rel='prev' class="fas fa-house-user" href="./geral.php"></a>
             </ul>
         </nav>
     </header>

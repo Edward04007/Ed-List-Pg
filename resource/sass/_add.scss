@@ -79,9 +79,9 @@
         margin-top: 0.4em;
         border-radius: 0.5em;
         background-color: $bg-color-buttun;
-        &:not(:last-child){
-            margin-bottom: 3em;
-        }
+    }
+    &:not(:first-child) {
+        margin-bottom: 2em;
     }
 }
 .menu{
