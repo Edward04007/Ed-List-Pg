@@ -22,7 +22,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8544c965ee.js" crossorigin="anonymous"></script>
     <script src='../scripts/menu.js' defer></script>
-    <script type="module" src="https://ed-list.herokuapp.com/pwabuilder-sw-register.js" defer></script>
+    <script type="module" src="../pwabuilder-sw-register.js" defer></script>
  </head>
  <body>
     <div class="bg-img">

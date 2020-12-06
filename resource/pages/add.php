@@ -23,7 +23,7 @@
     <script src="https://kit.fontawesome.com/8544c965ee.js" crossorigin="anonymous"></script>
     <script src='../scripts/menu.js' defer></script>
     <script src='../scripts/preview.js' defer></script>
-    <script type="module" src="https://ed-list.herokuapp.com/pwabuilder-sw-register.js" defer></script>
+    <script type="module" src="../pwabuilder-sw-register.js" defer></script>
 </head>
 <body>
     <nav class="menu-op">
