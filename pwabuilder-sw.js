@@ -1,1 +1,0 @@
-const CACHE="pwabuilder-offline";importScripts("https://storage.googleapis.com/workbox-cdn/releases/5.1.2/workbox-sw.js"),self.addEventListener("message",e=>{e.data&&"SKIP_WAITING"===e.data.type&&self.skipWaiting()}),workbox.routing.registerRoute(new RegExp("/*"),new workbox.strategies.StaleWhileRevalidate({cacheName:CACHE}));
