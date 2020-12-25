@@ -1,0 +1,141 @@
+.menu-op{
+    width: 100%;
+    height: 1.8em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: $bg-color;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+    span{
+        font-size: 1.1rem;
+        font-weight: bold;
+        font-family: $open-sans;
+    }
+}
+.conteudo {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.fotoPrew {
+    width: 64px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: $bg-input;
+    border: solid 1px $bg-border;
+    img {
+        width: 64px;
+        height: 50px;
+        border-radius: 100%;
+    }
+}
+.form {
+    display: flex;
+    margin-top: 2em;
+    align-items: center;
+    flex-direction: column;
+    label {
+        width: 95%;
+        padding: 0.2em;
+        cursor: pointer;
+        font-size: 0.9rem;
+        margin-top: 0.4em;
+        border-radius: 0.5em;
+        text-align: center;
+        background-color: $bg-color-buttun;
+    }
+    input {
+        width: 95%;
+        font-size: 1.2rem;
+        margin-top: 0.4em;
+        padding-left: 0.4em;
+        border-radius: 0.5em;
+        color: $color-input;
+        background-color: $bg-input;
+        border: solid 2px $bg-border;
+    }
+    select {
+        width: 95%;
+        font-size: 1.2rem;
+        padding-left: 0.4em;
+        border-radius: 0.5em;
+        color: $color-input;
+        background-color: $bg-input;
+        border: solid 2px $bg-border;
+    }
+    option {
+        font-size: 1.2rem;
+        color: $color-input;
+        background-color: $bg-input;
+    }
+    button {
+        width: 95%;
+        padding: 0.2em;
+        cursor: pointer;
+        font-size: 0.9rem;
+        margin-top: 0.4em;
+        border-radius: 0.5em;
+        background-color: $bg-color-buttun;
+    }
+}
+form:not(:first-child) {
+    margin-bottom: 2em;
+}
+.menu{
+    bottom: 0px;
+    width: 100%;
+    height: 45px;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    background-image: $bg-color;
+    li{
+        font-size: 1rem;
+        margin-left: 0.4em;
+        margin-right:0.4rem;
+    }
+    a{
+        font-size: 1rem;
+        margin-left: 0.4em;
+        margin-right:0.4rem;
+    }
+}
+.pop{
+    width: 90%;
+    bottom: 9%;
+    height: 40%;
+    padding: 0.5em;
+    position: fixed;
+    align-items: center;
+    border-radius: 0.7em;
+    flex-direction: column;
+    background-image: $bg-color;
+}
+.video{
+    display: none;
+    span{
+        margin: 0.2em;
+        font-weight: bold;
+        white-space: nowrap;
+        font-family: $roboto;
+    }
+    ul{
+        display: flex;
+        overflow: auto;
+        align-items: center;
+        flex-direction: column;
+    }
+    a{
+        padding: 0.1em;
+        font-size: 1.2rem;
+        white-space: nowrap;
+        font-family: $open-sans;
+    }
+}
+.mostrar{
+    display: flex;
+}
