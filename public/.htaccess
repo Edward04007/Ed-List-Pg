@@ -1,5 +1,5 @@
 # Não listamento de diretórios
-Options -Indexes
+# Options -Indexes
 
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
