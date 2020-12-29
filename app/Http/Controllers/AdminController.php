@@ -16,7 +16,7 @@ class AdminController extends Controller
 
             $discs = TB_DisciplinaModel::all();
 
-            return view('/admin/add', compact('discs'));
+            return view('admin/add', compact('discs'));
 
         }else{
 
@@ -89,7 +89,7 @@ class AdminController extends Controller
             return back();
 
         }else{
-            
+
             return back();
         }
     }
