@@ -1,15 +1,19 @@
+// Modo escuro
+$bg_02: #131414;
+$bg-top-bar_02: #202325;
+$bg-form_02:  #18191A;
+$font-color-branco: #F2FFFF;
+// Modo padrão
+$font-color-azul: #0F96E1;
+$bg-top-bar_01: linear-gradient(90deg, #0167EC 0%, #0F80E8 40.84%, #52D0EC 87.27%);
+$bg-form_01: #EBF2F1;
+$bg_01: #F3FAF8;
+
+// Fontes
 $open-sans: 'Open Sans', sans-serif;
 $roboto: 'Roboto', sans-serif;
-//cor de textos
-$color-text:rgb(231, 231, 231);;
-$color-input: rgb(54, 53, 54);
-$color-text-session:rgb(119, 118, 118);
-$color-url:rgb(165, 209, 245);
-//cores de fundo 
-$bg-input:#eceef5;
-$bg-border: rgb(8, 195, 251);
-$bg-color-buttun: rgba(5,175,242,1);
-/* $bg-welcome: linear-gradient(rgb(68, 57, 219),rgb(57, 141, 219)); */
-$bg-pop-text: linear-gradient(29deg, rgb(4, 135, 216) 43%, rgb(29, 156, 206) 83%);
-$bg-color: linear-gradient(29deg, rgba(5,108,242,1) 19%, rgba(5,151,242,1) 43%, rgba(5,175,242,1) 83%);
-$bg-marca: rgb(25, 85, 144);
+
+// all themes
+$bg-button-azul: #0F96E1;
+$bg-border:#0F96E1;
+$bg-input: #f6f3f3;

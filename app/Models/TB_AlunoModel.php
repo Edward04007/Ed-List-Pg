@@ -14,6 +14,11 @@ class TB_AlunoModel extends Model
         'name',
         'senha',
         'pk_aluno',
-        'foto'
+        'foto',
+        'senha'
     ];
+
+ 
+    protected $primaryKey = 'pk_aluno';
+    public $timestamps = false;
 }

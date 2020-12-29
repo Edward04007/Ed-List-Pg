@@ -7,6 +7,7 @@ use App\Models\TB_AlunoModel;
 use Illuminate\Http\Request;
 
 class LoginController extends Controller{
+    
     public function index(){
 
         if(session()->has('UsuarioLogado')){
@@ -35,5 +36,11 @@ class LoginController extends Controller{
         };
     }
 
+    public function lagout(){
+
+        session()->pull('UsuarioLogado');
+        return view('index');
+
+    }
 
 }

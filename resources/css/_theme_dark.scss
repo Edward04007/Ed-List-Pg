@@ -1,0 +1,21 @@
+/* Tema escuro */
+.theme-dark{
+    background-color: $bg_02;
+}
+.theme-dark-bar{
+    background-color: $bg-top-bar_02;
+    box-shadow: -1px 4px 13px 0px #151616,
+    -7px 16px 18px -7px #151616;
+}
+.theme-dark-camp{
+    background-color: $bg-form_02;
+    box-shadow: -1px 4px 13px 0px #1a1919, -7px 16px 18px -7px #101111;
+}
+.theme-dark-color-font{
+    color: $font-color-branco;
+}
+.theme-dark-menu{
+    background-color: $bg_02;
+    box-shadow: 10px 11px 10px -7px #151616,
+    2px 1px 12px 0px #151616;
+}

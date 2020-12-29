@@ -1,0 +1,71 @@
+.content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: 0.8em;
+    overflow: auto;
+    flex-direction: column-reverse;
+    article{
+        height: 200px;
+        display: flex;
+        margin-top: 0.8em;
+        align-items: center;
+        border-radius: 0.7em;
+        font-family: $roboto;
+        flex-direction: column;
+        span{
+            font-size: 1rem;
+            margin-top: 0.4em;
+            font-weight: bold;
+        }
+    }
+}
+.text{
+    width: 70%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    time{
+        font-size: 1rem;
+        margin-top: 0.4em;
+    }
+    span{
+        font-size: 1rem;
+        font-weight: bold;
+        margin-right: 0.4em;
+        padding-right: 0.4em;
+    }
+    a{
+        font-size: 1rem;
+        margin-top: 0.4em;
+        text-decoration: underline;
+    }
+}
+.div-span{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+.div-result{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+.links{
+    width: 100%;
+    display: flex;
+    margin-top: 0.2em;
+    margin-bottom: 0.7em;
+    flex-direction: row;
+    justify-content: center;
+    a{
+        margin: 0.5em;
+    }
+}
+.empty{
+    font-size: 1rem;
+    text-align: center;
+    white-space: nowrap;
+    font-family: $roboto;
+}

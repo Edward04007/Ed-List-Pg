@@ -4,88 +4,75 @@
 <link rel='stylesheet' type='text/css' media='screen' href="{{mix('css/main_1.css')}}">
 @endpush
 @section('content')
-<nav class="menu-op">
-        <span>Geral</span>
-    </nav>
-    <section class="conteudo">
-        <div class='titles-session'><span>Horário</span></div>
+<div class="content">
+        <div class='titles-session'><span class="font">Horário</span></div>
         <div class='div-horarios'>
-            <div>
-            <span>Segunda-feira</span>
+            <div class="div-form">
+            <span class="font">Segunda-feira</span>
                 <ul>
-                    <li>Física- 08:00 às 8:40</li>
-                    <li>Espanhol- 10:50 às 11:30</li>
-                    <li>História- 13:30 às 14:15</li>
-                    <li>Educação Física- 16:30 às 17:00</li>
+                    <li class="font">Física- 08:00 às 8:40</li>
+                    <li class="font">Espanhol- 10:50 às 11:30</li>
+                    <li class="font">História- 13:30 às 14:15</li>
+                    <li class="font">Educação Física- 16:30 às 17:00</li>
                 </ul>
             </div>
-            <div>
-            <span>Terça-feira</span>
+            <div class="div-form">
+            <span class="font">Terça-feira</span>
                 <ul>
-                    <li>Matemática- 8:00 às 9:30</li>
-                    <li>Geografia- 10:50 às 11:30</li>
-                    <li>Homero- 13:30 às 15:00</li>
-                    <li>Homero- 15:30 às 17:00</li>
+                    <li class="font">Matemática- 8:00 às 9:30</li>
+                    <li class="font">Geografia- 10:50 às 11:30</li>
+                    <li class="font">Homero- 13:30 às 15:00</li>
+                    <li class="font">Homero- 15:30 às 17:00</li>
                 </ul>
             </div>
-            <div>
-            <span>Quarta-feira</span>
+            <div class="div-form">
+            <span class="font">Quarta-feira</span>
                 <ul>
-                    <li>Israel- 8:00 às 9:30</li>
-                    <li>Israel- 10:00 às 11:30</li>
-                    <li>Inglês Técnico- 13:00 às 14:00</li>
-                    <li>Homero- 14:30 às 15:30</li>
-                    <li>Formação p/cidadania- 16:00 às 17:00</li>
+                    <li class="font">Israel- 8:00 às 9:30</li>
+                    <li class="font">Israel- 10:00 às 11:30</li>
+                    <li class="font">Inglês Técnico- 13:00 às 14:00</li>
+                    <li class="font">Homero- 14:30 às 15:30</li>
+                    <li class="font">Formação p/cidadania- 16:00 às 17:00</li>
                 </ul>
             </div>
-            <div>
-            <span>Quinta-feira</span>
+            <div class="div-form">
+            <span class="font">Quinta-feira</span>
                 <ul>
-                    <li>Inglês- 8:00 às 8:50</li>
-                    <li>Química- 10:00 às 11:30</li>
-                    <li>Português- 13:30 às 15:00</li>
-                    <li>Biologia- 16:15 as 17:00</li>
+                    <li class="font">Inglês- 8:00 às 8:50</li>
+                    <li class="font">Química- 10:00 às 11:30</li>
+                    <li class="font">Português- 13:30 às 15:00</li>
+                    <li class="font">Biologia- 16:15 as 17:00</li>
                 </ul>
             </div>
-            <div>
-            <span>Sexta-feira</span>
+            <div class="div-form">
+            <span class="font">Sexta-feira</span>
                 <ul>
-                    <li>Matemática- 8:00 às 9:30</li>
-                    <li>Filosofia- 10:45 às 11:30</li>
-                    <li>Sociologia- 16:30 às 17:00</li>
+                    <li class="font">Matemática- 8:00 às 9:30</li>
+                    <li class="font">Filosofia- 10:45 às 11:30</li>
+                    <li class="font">Sociologia- 16:30 às 17:00</li>
                 </ul>
             </div>
         </div>
-        <div class='titles-session'><span>Atividades</span></div>
+        <div class='titles-session'><span class="font">Atividades</span></div>
         <div class='estatistica-div'>
-            <div>
-            <span>Total</span>
+            <div class="div-form">
+            <span class="font">Total</span>
                 <ul>
-                    <li>{{$Atividades_total}}</li>
+                    <li class="font">{{$Atividades_total}}</li>
                 </ul>
             </div>
-            <div>
-            <span>Atribuído</span>
+            <div class="div-form">
+            <span class="font">Atribuído</span>
                 <ul>
-                    <li>{{$Atividades_atribuido}}</li>
+                    <li class="font">{{$Atividades_atribuido}}</li>
                 </ul>
             </div>
-            <div>
-            <span>Concluído</span>
+            <div class="div-form">
+            <span class="font">Concluído</span>
                 <ul>
-                    <li>{{$Atividades_concluido}}</li>
+                    <li class="font">{{$Atividades_concluido}}</li>
                 </ul>
             </div>
         </div>
-        <div class='titles-session'><span>Alunos</span></div>
-        <div class='alunos-div'>
-            <div>
-                @foreach ($lista as $lista)
-                <figure>
-                    <img src="{{$lista->foto}}" alt='foto de perfil'>
-                </figure>
-                @endforeach
-            </div>
-        </div>
-    </section>
+</div>
 @endsection

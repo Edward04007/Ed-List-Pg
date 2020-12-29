@@ -1,28 +1,49 @@
 @extends('templates.main')
-@section('title', 'Atividades')
+@section('title', 'Adminstração')
+@push('css')
+<link rel='stylesheet' type='text/css' media='screen' href="{{mix('css/main_4.css')}}">
+@endpush
 @section('content')
-<nav class="menu-op">
-    <span>Administração</span>
-</nav>
-<section class="conteudo">
-    <form  class="form" method="POST" action="../database/data/add_list.php">
-        <select require name="disc">
-            <option>Disciplina</option>
-                
-        </select>
-        <input type="url" autocomplete="off" name="url" require placeholder="https://exemplo.com">
-        <input type="date" require name="dataEntrega">
-        <button type="submit">Adicionar</button>
-    </form>
-    <form  class="form" method="POST" enctype="multipart/form-data" action="../database/data/add_aluno.php">
-        <div class="fotoPrew">
-            <img id="mostrarAqui"> 
-            <input style="display: none;" id="esfoto" type="file" accept="image/*" name="foto" onchange="mostrarImagem(event)">
-        </div>
-        <input type="text" autocomplete="off" require name="aluno_novo" placeholder="Nome do aluno">
-        <input type="password" maxlength="8" placeholder="Senha" name='pass'>
-        <label for="esfoto">Foto de perfil</label>
-        <button type="submit">Adicionar</button>
-    </form>
-</section>
+<div class="content">
+    <div class="div-form form-style"> {{-- Atividades --}}
+        <legend class="font">Adicionar Atividades</legend>
+        <form method="POST" action="{{route('lista.insertLista')}}">
+            @csrf
+            <select require name="disc">
+                <option>Disciplina</option>
+                @foreach ($discs as $disc)
+                <option value="{{$disc->pk_disciplina}}">{{$disc->materia}}</option>
+                @endforeach
+            </select>
+            <input type="text" autocomplete="off" name="url" require placeholder="Página ou link da atividade">
+            <input type="date" require name="dataEntrega">
+            <button type="submit">Adicionar</button>
+        </form>
+    </div>
+    <div class="div-form form-style">{{-- Aluno --}}
+        <legend class="font">Adicionar aluno</legend>
+        <form method="POST" action="{{route('aluno.insertAluno')}}">
+            @csrf
+            <input type="url" placeholder="link da foto" require name="url_foto">
+            <input type="text" autocomplete="off" require name="aluno_novo" placeholder="Nome do aluno">
+            <input type="password" maxlength="8" require placeholder="Senha" name='passw'>
+            <button type="submit">Adicionar</button>
+        </form>
+    </div>
+    <div class="div-form form-style"> {{-- Video --}}
+        <legend class="font">Adicionar Vídeos</legend>
+        <form method="POST" action="{{route('video.insertvideo')}}">
+            @csrf
+            <select require name="discip">
+                <option>Disciplina</option>
+                @foreach ($discs as $disc)
+                <option value="{{$disc->pk_disciplina}}">{{$disc->materia}}</option>
+                @endforeach
+            </select>
+            <input type="url" autocomplete="off" name="url_video" require placeholder="Link do video">
+            <input type="date" require name="doDia">
+            <button type="submit">Adicionar</button>
+        </form>
+    </div>
+</div>
 @endsection

@@ -5,9 +5,9 @@
     "short_name": "EdList",
     "scope": "/",
     "display": "standalone",
-    "start_url": "https://ed-list.herokuapp.com/",
-    "background_color": "#05aff2",
-    "theme_color": "#05aff2",
+    "start_url": "https://ed-list.herokuapp.com",
+    "background_color": "#0F96E1",
+    "theme_color": "#0F96E1",
     "description": "Tenha um maior controle sobre as suas atividades",
     "orientation": "any",
     "related_applications": [],
@@ -50,6 +50,6 @@
             "sizes": "16x16"
         }
     ],
-    "url": "https://ed-list.herokuapp.com/",
+    "url": "https://ed-list.herokuapp.com",
     "screenshots": []
 }

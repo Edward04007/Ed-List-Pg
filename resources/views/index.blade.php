@@ -18,27 +18,31 @@
     <link rel="icon" sizes="16x16" href="https://i.imgur.com/2rx03NK.png">
     <link rel='stylesheet' type='text/css' media='screen' href="{{mix('css/main.css')}}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <script type="module" src="{{asset('pwabuilder-sw-register.js')}}" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  {{-- <script type="module" src="{{asset('pwabuilder-sw-register.js')}}" defer></script> --}}
+  <script src="{{mix('js/autoLoadTheme.js')}}" defer></script>
 </head>
 <body>
-    <header class="menu-op">
-        <figure></figure>
-    </header>
-    <section class="conteudo">
-        <form method='POST' action="{{route('login.store')}}">
-            @csrf
-            <input type="text" maxlength='15' placeholder="Aluno" name='user' value="{{old('user')}}">
-            <input type="password" maxlength="8" placeholder="Senha" name='pass'>
-            <button type="submit">Entrar</button>
-        </form>
-        <div>
-        @if($errors->any())
-            @foreach ($errors->all() as $error)
-            <span>{{$error}}</span>
-            @endforeach
-        @endif
+    <div class="root" >
+        <header class="header">
+            <figure></figure>
+        </header>
+        <section class="div-form">
+            <form method='POST' action="{{route('login.store')}}">
+                @csrf
+                <legend class="font">LOGIN</legend>
+                 <input type="text" placeholder="Aluno" name='user' value="{{old('user')}}">
+                <input type="password" placeholder="Senha" name='pass'>
+                <button type="submit">Entrar</button>
+            </form>
+        </section>
+        <div class="erros">
+            @if($errors->any())
+                @foreach ($errors->all() as $error)
+                <span class="red">{{$error}}</span>
+                @endforeach
+            @endif
         </div>
-    </section>
+    </div>
 </body>
 </html>

@@ -19,6 +19,13 @@ class TB_ListaModel extends Model
         'fk_status',
         'data_entregue'
     ];
+    protected $primaryKey = 'pk_lista';
 
+    protected $casts = [
+        'fk_aluno' => 'integer',
+        'fk_disciplina' => 'integer',
+        'fk_anexo' => 'integer',
+        'fk_status' => 'integer',
+    ];
     public $timestamps = false;
 }

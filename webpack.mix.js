@@ -31,12 +31,28 @@ mix.styles(
         'resources/css/main_4.css'
         ,'public/css/main_4.css'
     )
-    .js(
-        'resources/js/preview.js'
-    ,'public/js/preview.js'
+    .styles(
+        'resources/css/main_5.css'
+        ,'public/css/main_5.css'
+    )
+    .styles(
+        'resources/css/main_6.css'
+        ,'public/css/main_6.css'
+    )
+    .styles(
+        'resources/css/main_7.css'
+        ,'public/css/main_7.css'
     )
     .js(
         'resources/js/menu.js'
     ,'public/js/menu.js'
+    )
+    .js(
+        'resources/js/theme.js'
+    ,'public/js/theme.js'
+    )
+    .js(
+        'resources/js/autoLoadTheme.js'
+    ,'public/js/autoLoadTheme.js'
     )
     .version();

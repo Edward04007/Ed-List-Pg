@@ -24,15 +24,18 @@ class StoreLoginInsert extends FormRequest
     public function rules()
     {
         return [
-            'user' => 'required|min:4|max:15',
+            'user' => 'required|max:15',
             'pass'=> 'required|min:4|max:8',
         ];
     }
     public function messages()
     {
         return[
-            'user.required'=> 'Aluno não existe ou está incorreto!',
-            'pass.required'=> 'Senha incorreta!'
+            'user.required'=> 'É necessário digitar o nome do aluno!',
+            'pass.required'=> 'É necessário digitar a senha!',
+            'user.max'=> ' Aluno não encontrado!',
+            'pass.max'=> 'Senha incorreta!',
+            'pass.min'=> 'Senha muito curta!'
         ];
     }
 }
