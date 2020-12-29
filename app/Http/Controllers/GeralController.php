@@ -24,11 +24,7 @@ class GeralController extends Controller{
                 where('fk_aluno', '=', session('UsuarioLogado'))->
                 where('fk_status', '=', '2')->count();
 
-        return view('geral', compact(
-            'Atividades_total',
-        'Atividades_atribuido',
-         'Atividades_concluido'
-        ));
+        return view('pages/geral', compact('Atividades_total','Atividades_atribuido','Atividades_concluido'));
 
     }
 }

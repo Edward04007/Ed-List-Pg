@@ -4,7 +4,6 @@
 <link rel='stylesheet' type='text/css' media='screen' href="{{mix('css/main_3.css')}}">
 @endpush
 @section('content')
-<div class="content">
     <div class="links">
         <a href="{{$ats->previousPageUrl()}}" class="fas fa-angle-left font"></a>
         <a href="{{$ats->nextPageUrl()}}" class="fas fa-angle-right font"></a>
@@ -29,5 +28,4 @@
     @empty
     <span class="empty font">Parece que você fez tudo!</span>
     @endforelse
-</div>
 @endsection

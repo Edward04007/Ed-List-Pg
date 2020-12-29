@@ -37,8 +37,10 @@
 </head>
 <body>
     <div class="root">
-        @yield('content')
-        <div class="menu-lateral">
+        <div class="content">
+            @yield('content')
+        </div>
+        <nav class="menu-lateral">
             <ul>
                 <li class="fas fa-user font"><a class="font" href="{{Route('perfil.perfilShow')}}">Perfil</a></li>
                 <li  class="fas fa-video font"><a class="font" href="{{Route('record.recordShow')}}">Gravações</a></li>
@@ -47,7 +49,7 @@
                 <li class="fas fa-moon font mode_dark"><a class="font mode_dark">Modo Dark</a></li>
                 <li class="fas fa-sign-out-alt font"><a class="font" href="{{Route('lagout.lagout')}}">Sair</a></li>
             </ul>
-        </div>
+        </nav>
         <header class="header">
             <div class="subMenu div-form">
                 <span class="font">Atividades</span>

@@ -2,13 +2,13 @@
     margin: 0;
     border: 0;
     padding: 0;
+    outline: 0;
+    line-height: 1;
     list-style: none;
+    box-shadow: 0 0 0;
     font-size: 1.4rem;
     text-decoration: none;
     box-sizing: border-box;
-    outline: 0;
-    box-shadow: 0 0 0;
-    line-height: 1;
 }
 ::-webkit-scrollbar-track-piece {
     background-color: #35b2f5;

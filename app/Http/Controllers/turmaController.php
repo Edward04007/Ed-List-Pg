@@ -11,6 +11,7 @@ class turmaController extends Controller
     public function turmaShow(){
 
         $listas = TB_AlunoModel::paginate(3);
+        
         return view('turma', compact('listas'));
 
     }

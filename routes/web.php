@@ -19,10 +19,8 @@ Route::get("/login", [LoginController::class, 'index'])->name('login.index');
 Route::get('/logout', [LoginController::class, 'lagout'])->name('lagout.lagout');
 
 
-
-
-
 Route::middleware('check.session')->group(function(){
+
 /* Rota para página inicial quando logado */
 Route::get("/geral", [GeralController::class, 'index'])->name('geral.index');
 /* Rota para atualizar status da atividade */
@@ -49,4 +47,5 @@ Route::post("/lista", [AdminController::class,'insertLista'])->name('lista.inser
 Route::post("/aluno", [AdminController::class,'insertAluno'])->name('aluno.insertAluno');
 /* Form para adicionar vídeo */
 Route::post("/video", [AdminController::class,'insertvideo'])->name('video.insertvideo');
+
 });

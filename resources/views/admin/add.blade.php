@@ -4,7 +4,6 @@
 <link rel='stylesheet' type='text/css' media='screen' href="{{mix('css/main_4.css')}}">
 @endpush
 @section('content')
-<div class="content">
     <div class="div-form form-style"> {{-- Atividades --}}
         <legend class="font">Adicionar Atividades</legend>
         <form method="POST" action="{{route('lista.insertLista')}}">
@@ -45,5 +44,4 @@
             <button type="submit">Adicionar</button>
         </form>
     </div>
-</div>
 @endsection

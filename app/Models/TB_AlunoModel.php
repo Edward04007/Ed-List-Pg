@@ -15,10 +15,12 @@ class TB_AlunoModel extends Model
         'senha',
         'pk_aluno',
         'foto',
+    ];
+
+    protected $hidden = [
         'senha'
     ];
 
- 
     protected $primaryKey = 'pk_aluno';
     public $timestamps = false;
 }

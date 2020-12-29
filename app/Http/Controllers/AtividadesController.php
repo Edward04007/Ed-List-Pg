@@ -15,7 +15,8 @@ class AtividadesController extends Controller
             join('tb_disciplina','fk_disciplina','=','pk_disciplina')->
             join('tb_anexo','fk_anexo','=','pk_anexo')->
             select('data_entrega','url','materia','pk_lista')->paginate(4);
-        return view('fazer', compact('ats'));
+            
+        return view('pages/fazer', compact('ats'));
     }
 
     public function lista_concluido(){
@@ -27,7 +28,7 @@ class AtividadesController extends Controller
             join('tb_anexo','fk_anexo','=','pk_anexo')->
             select('data_entrega','data_entregue','url','materia')->paginate(4);
 
-        return view('feito', compact('ats'));
+        return view('pages/feito', compact('ats'));
 
     }
 

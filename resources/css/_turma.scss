@@ -5,9 +5,9 @@
 .content{
     width: 100%;
     height: 100%;
+    display: flex;
     padding: 0.8em;
     overflow: auto;
-    display: flex;
     align-items: center;
     flex-direction: column;
     article{
@@ -38,8 +38,8 @@
     width: 100%;
     display: flex;
     margin-top: 0.2em;
-    margin-bottom: 0.7em;
     flex-direction: row;
+    margin-bottom: 0.7em;
     justify-content: center;
     a{
         margin: 0.5em;

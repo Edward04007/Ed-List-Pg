@@ -4,7 +4,6 @@
 <link rel='stylesheet' type='text/css' media='screen' href="{{mix('css/main_1.css')}}">
 @endpush
 @section('content')
-<div class="content">
         <div class='titles-session'><span class="font">Horário</span></div>
         <div class='div-horarios'>
             <div class="div-form">
@@ -74,5 +73,4 @@
                 </ul>
             </div>
         </div>
-</div>
 @endsection

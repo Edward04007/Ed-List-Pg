@@ -29,15 +29,15 @@
         align-items: center;
         flex-direction: column;
         legend{
-            font-family: $open-sans;
             font-weight: bold;
+            font-family: $open-sans;
         }
         input{
             width: 95%;
+            color: #3f3d3d;
             font-size: 1.2rem;
             margin-top: 0.4em;
             padding-left: 0.4em;
-            color: #3f3d3d;
             border-radius: 0.5em;
             background-color: $bg-input;
             border: solid 3px $bg-border;
@@ -46,10 +46,10 @@
             width: 95%;
             padding: 0.2em;
             cursor: pointer;
+            color: #3f3d3d;
             font-size: 0.9rem;
             margin-top: 0.4em;
             border-radius: 0.5em;
-            color: #3f3d3d;
            background-color: $bg-button-azul;
         }
     }
@@ -57,8 +57,8 @@
 .erros{
     width: 100%;
     display: flex;
-    align-items: center;
     margin-top: 0.4em;
+    align-items: center;
     flex-direction: column;
     color: rgb(231, 60, 60);
 }

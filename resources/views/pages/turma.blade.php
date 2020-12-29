@@ -4,7 +4,6 @@
 <link rel='stylesheet' type='text/css' media='screen' href="{{mix('css/main_6.css')}}">
 @endpush
 @section('content')
-<div class="content">
     @foreach ($listas as $lista)
     <article class="div-form">
         <div>
@@ -17,5 +16,4 @@
         <a href="{{$listas->previousPageUrl()}}" class="fas fa-angle-left font"></a>
         <a href="{{$listas->nextPageUrl()}}" class="fas fa-angle-right font"></a>
     </div>
-</div>
 @endsection

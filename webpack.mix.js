@@ -12,16 +12,16 @@ const mix = require('laravel-mix');
  */
 
 mix.styles(
-    'resources/css/main.css'
-    ,'public/css/main.css'
+        'resources/css/main.css'
+        ,'public/css/main.css'
     )
     .styles(
         'resources/css/main_1.css'
         ,'public/css/main_1.css'
     )
     .styles(
-            'resources/css/main_2.css'
-            ,'public/css/main_2.css'
+        'resources/css/main_2.css'
+        ,'public/css/main_2.css'
     )
     .styles(
         'resources/css/main_3.css'
@@ -45,14 +45,14 @@ mix.styles(
     )
     .js(
         'resources/js/menu.js'
-    ,'public/js/menu.js'
+        ,'public/js/menu.js'
     )
     .js(
         'resources/js/theme.js'
-    ,'public/js/theme.js'
+        ,'public/js/theme.js'
     )
     .js(
         'resources/js/autoLoadTheme.js'
-    ,'public/js/autoLoadTheme.js'
+        ,'public/js/autoLoadTheme.js'
     )
     .version();

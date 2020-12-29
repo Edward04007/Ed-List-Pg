@@ -1,4 +1,5 @@
 const atividade = document.querySelector('.subMenu')
+
 menu(atividade)
 function menu(atividade){
         document.querySelector('.button').addEventListener('click', () =>{
@@ -9,15 +10,19 @@ function menu(atividade){
 
             atividade.classList.remove('mostrar')
         })
+        document.querySelector('.menu-lateral').addEventListener('click', () =>{
+
+            atividade.classList.remove('mostrar')
+        })
 }
 
 const menuL = document.querySelector('.menu-lateral')
 menuLA(menuL)
+
 function menuLA(menuL){
     document.querySelector('.menu').addEventListener('click', () =>{
-        menuL.classList.toggle('mostrar-menu')
-    })
-
+            menuL.classList.toggle('mostrar-menu')
+        })
 }
 
 const theme_defaul_menu  = document.querySelector('.menu-lateral');
@@ -44,8 +49,8 @@ function theme_menu(theme_defaul_menu, theme_defaul_cont ){
             theme_defaul_cont.classList.add('theme-dark');
 
         }
-
-    })}
+    })
+}
 
 if(localStorage.getItem('theme')){
 

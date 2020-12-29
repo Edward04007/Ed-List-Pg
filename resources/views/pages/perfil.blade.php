@@ -4,7 +4,6 @@
 <link rel='stylesheet' type='text/css' media='screen' href="{{mix('css/main_7.css')}}">
 @endpush
 @section('content')
-<div class="content">
     <div class="div-form form-style">
         <legend class="font">Perfil</legend>
         <form method="POST" action="{{route('perfil.FotoUpdate')}}">
@@ -24,5 +23,4 @@
             <button type="submit">Atualizar</button>
         </form>
     </div>
-</div>
 @endsection
