@@ -34,15 +34,17 @@
     @else
     <div class="orderBy">
         <form action="{{route('filtrar.filtrar_concluido')}}" method="post">
-            <legend class="font">Filtrar por:</legend>
-            <select require name="disc">
-                <option value="todas">Disciplinas</option>
-                @foreach ($discs as $disc)
-                <option value="{{$disc->pk_disciplina}}">{{$disc->materia}}</option>
-                @endforeach
-            </select>
-            @csrf
-            <button type="submit">Filtrar</button>
+            <legend class="font">Filtrar por</legend>
+            <div>
+                <select require name="disc">
+                    <option value="todas">Disciplinas</option>
+                    @foreach ($discs as $disc)
+                    <option value="{{$disc->pk_disciplina}}">{{$disc->materia}}</option>
+                    @endforeach
+                </select>
+                @csrf
+                <button type="submit">Filtrar</button>
+            </div>
         </form>
     </div>
     @endif

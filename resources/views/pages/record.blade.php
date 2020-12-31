@@ -5,12 +5,11 @@
 @endpush
 @section('content')
     @if ($listas != '')
-
-    @else
     <div class="links">
         <a href="{{$listas->previousPageUrl()}}" class="fas fa-angle-left font"></a>
         <a href="{{$listas->nextPageUrl()}}" class="fas fa-angle-right font"></a>
     </div>
+    @else
     @endif
     @forelse ($listas as $lista)
     <article class="div-form">
@@ -30,19 +29,21 @@
     <span class="empty font">Oops.. Nadinha!</span>
     @endforelse
     @if ($listas != '')
-    @else
     <div class="orderBy">
         <form action="{{route('filtrar_disciplina.record_filtre')}}" method="post">
             <legend class="font">Filtrar por:</legend>
-            <select require name="disc">
-                <option value="todas">Disciplinas</option>
-                @foreach ($discs as $disc)
-                <option value="{{$disc->pk_disciplina}}">{{$disc->materia}}</option>
-                @endforeach
-            </select>
-            @csrf
-            <button type="submit">Filtrar</button>
+            <div>
+                <select require name="disc">
+                    <option value="todas">Disciplinas</option>
+                    @foreach ($discs as $disc)
+                    <option value="{{$disc->pk_disciplina}}">{{$disc->materia}}</option>
+                    @endforeach
+                </select>
+                @csrf
+                <button type="submit">Filtrar</button>
+            </div>
         </form>
     </div>
+    @else
     @endif
 @endsection
