@@ -4,10 +4,13 @@
 <link rel='stylesheet' type='text/css' media='screen' href="{{mix('css/main_3.css')}}">
 @endpush
 @section('content')
+    @if ($ats == '')
+    @else
     <div class="links">
         <a href="{{$ats->previousPageUrl()}}" class="fas fa-angle-left font"></a>
         <a href="{{$ats->nextPageUrl()}}" class="fas fa-angle-right font"></a>
     </div>
+    @endif
     @forelse ($ats as $ats)
     <form class="div-form" method='POST' action='{{Route('update.update', $ats->pk_lista)}}'>
         @csrf
@@ -28,4 +31,20 @@
     @empty
     <span class="empty font">Parece que você fez tudo!</span>
     @endforelse
+    @if ($ats == '')
+    @else
+    <div class="orderBy">
+        <form action="{{route('filtrar.filtrar_atribuido')}}" method="post">
+            <legend class="font">Filtrar por:</legend>
+            <select require name="disc">
+                <option value="todas">Disciplinas</option>
+                @foreach ($discs as $disc)
+                <option value="{{$disc->pk_disciplina}}">{{$disc->materia}}</option>
+                @endforeach
+            </select>
+            @csrf
+            <button type="submit">Filtrar</button>
+        </form>
+    </div>
+    @endif
 @endsection

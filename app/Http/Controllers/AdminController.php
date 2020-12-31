@@ -48,7 +48,7 @@ class AdminController extends Controller
                         ]);
                     }
 
-                    return back();;
+                    return back();
                 }
             }
         }else{

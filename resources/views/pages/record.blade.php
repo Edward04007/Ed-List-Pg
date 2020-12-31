@@ -4,10 +4,14 @@
 <link rel='stylesheet' type='text/css' media='screen' href="{{mix('css/main_5.css')}}">
 @endpush
 @section('content')
+    @if ($listas != '')
+
+    @else
     <div class="links">
         <a href="{{$listas->previousPageUrl()}}" class="fas fa-angle-left font"></a>
         <a href="{{$listas->nextPageUrl()}}" class="fas fa-angle-right font"></a>
     </div>
+    @endif
     @forelse ($listas as $lista)
     <article class="div-form">
         <span class="font">{{$lista->materia}}</span>
@@ -25,4 +29,20 @@
     @empty
     <span class="empty font">Oops.. Nadinha!</span>
     @endforelse
+    @if ($listas != '')
+    @else
+    <div class="orderBy">
+        <form action="{{route('filtrar_disciplina.record_filtre')}}" method="post">
+            <legend class="font">Filtrar por:</legend>
+            <select require name="disc">
+                <option value="todas">Disciplinas</option>
+                @foreach ($discs as $disc)
+                <option value="{{$disc->pk_disciplina}}">{{$disc->materia}}</option>
+                @endforeach
+            </select>
+            @csrf
+            <button type="submit">Filtrar</button>
+        </form>
+    </div>
+    @endif
 @endsection
