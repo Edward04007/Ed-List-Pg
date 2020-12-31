@@ -10,10 +10,11 @@ class RecordController extends Controller
 {
     public function recordShow(){
 
-        $listas = TB_VideoModel::select('materia', 'data_gravado_em', 'url_video')->join('tb_disciplina','fk_disciplina','=','pk_disciplina')->paginate(4);
+        $listas_videos = TB_VideoModel::select('materia', 'data_gravado_em', 'url_video')->
+        join('tb_disciplina','fk_disciplina','=','pk_disciplina')->paginate(4);
 
         $discs = TB_DisciplinaModel::all();
-        return view('pages/record', compact('listas','discs'));
+        return view('pages/record', compact('listas_videos','discs'));
 
     }
 
@@ -25,13 +26,13 @@ class RecordController extends Controller
             return redirect()->route('record.recordShow');
 
         }else{
-            $listas = TB_VideoModel:: where('fk_disciplina','=',$request->disc)->
+            $listas_videos = TB_VideoModel:: where('fk_disciplina','=',$request->disc)->
             select('materia', 'data_gravado_em', 'url_video')->
             join('tb_disciplina','fk_disciplina','=','pk_disciplina')->
             orderBy('materia')->paginate(4);
 
             $discs = TB_DisciplinaModel::all();
-            return view('pages/record', compact('listas','discs'));
+            return view('pages/record', compact('listas_videos','discs'));
         }
     }
 }

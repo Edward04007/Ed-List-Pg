@@ -5,7 +5,7 @@
 @endpush
 @section('content')
     <div class="div-form form-style"> {{-- Atividades --}}
-        <legend class="font">Adicionar Atividades</legend>
+        <legend class="font">Atividade</legend>
         <form method="POST" action="{{route('lista.insertLista')}}">
             @csrf
             <select require name="disc">
@@ -20,7 +20,7 @@
         </form>
     </div>
     <div class="div-form form-style">{{-- Aluno --}}
-        <legend class="font">Adicionar aluno</legend>
+        <legend class="font">Aluno</legend>
         <form method="POST" action="{{route('aluno.insertAluno')}}">
             @csrf
             <input type="url" placeholder="link da foto" require name="url_foto">
@@ -30,7 +30,7 @@
         </form>
     </div>
     <div class="div-form form-style"> {{-- Video --}}
-        <legend class="font">Adicionar Vídeos</legend>
+        <legend class="font">Vídeos</legend>
         <form method="POST" action="{{route('video.insertvideo')}}">
             @csrf
             <select require name="discip">
