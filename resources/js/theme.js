@@ -1,3 +1,4 @@
+/* Aplicando tema */
 const theme  = document.getElementsByClassName('root');
 const theme_bar = document.getElementsByClassName('header');
 const theme_camp = document.getElementsByClassName('div-form');

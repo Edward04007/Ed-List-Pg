@@ -66,7 +66,7 @@
 .menu-lateral{
     top: 0;
     left: 0;
-    width: 5.5em;
+    width: 7em;
     height: 100vh;
     display: none;
     position: fixed;
@@ -92,4 +92,9 @@
 }
 .mostrar-menu{
     display: block;
+}
+.clickMark{
+    padding: 0.2em;
+    border-radius: 0.3em;
+    background-color: #1c8cc8bc;
 }

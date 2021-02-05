@@ -1,34 +1,43 @@
 .content{
     width: 100%;
     height: 100%;
+    overflow: hidden;
+}
+.div-background{
+    top: 7%;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
     display: flex;
     padding: 0.8em;
     overflow: auto;
+    margin-top: 3em;
+    position: absolute;
     flex-direction: column-reverse;
-    form{
-        height: 200px;
-        display: flex;
-        margin-top: 0.8em;
-        align-items: center;
+}
+.div-principal{
+    height: 200px;
+    display: flex;
+    margin-bottom: 1em;
+    align-items: center;
+    border-radius: 0.7em;
+    font-family: $roboto;
+    flex-direction: column;
+    legend{
+        font-size: 1rem;
+        margin-top: 0.4em;
+        font-weight: bold;
+    }
+    button{
+        width: 80%;
+        margin: 0.7em;
+        padding: 0.2em;
+        font-size: 1rem;
+        cursor: pointer;
+        color: #3f3d3d;
         border-radius: 0.7em;
-        font-family: $roboto;
-        flex-direction: column;
-        legend{
-            margin-top: 1em;
-            font-size: 1rem;
-            font-weight: bold;
-        }
-        button{
-            width: 80%;
-            margin: 0.7em;
-            padding: 0.2em;
-            font-size: 1rem;
-            cursor: pointer;
-            color: #3f3d3d;
-            border-radius: 0.7em;
-            font-family: $open-sans;
-            background-color: $bg-button-azul;
-        }
+        font-family: $open-sans;
+        background-color: $bg-button-azul;
     }
 }
 .text{

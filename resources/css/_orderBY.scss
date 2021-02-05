@@ -1,7 +1,10 @@
 .orderBy{
+    left: 0px;
+    right: 0px;
+    padding: 0.5em;
+    position: absolute;
     form{
         display: flex;
-        padding: 0.2em;
         align-items: center;
         flex-direction: column;
         justify-content: center;
@@ -15,6 +18,7 @@
             font-weight: bold;
             margin-right: 0.4em;
             white-space: nowrap;
+            padding-bottom: 0.2em;
         }
         select{
             font-size: 1rem;
@@ -35,8 +39,8 @@
             padding: 0.2em;
             font-size: 1rem;
             color: #3f3d3d;
-            text-align: center;
             margin-top: 0.4em;
+            text-align: center;
             border-radius: 0.5em;
             background-color: $bg-button-azul;
         }

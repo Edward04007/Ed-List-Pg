@@ -4,37 +4,37 @@
 <link rel='stylesheet' type='text/css' media='screen' href="{{mix('css/main_2.css')}}">
 @endpush
 @section('content')
-    @if ($ats == '')
-    @else
-    <div class="links">
-        <a href="{{$ats->previousPageUrl()}}" class="fas fa-angle-left font"></a>
-        <a href="{{$ats->nextPageUrl()}}" class="fas fa-angle-right font"></a>
-    </div>
-    @endif
-    @forelse ($ats as $ats)
-    <article class="div-form">
-        <span class="font">{{$ats->materia}}</span>
-            <div class='text'>
-                <div class="div-span">
-                    <span class="font">Atividade</span>
-                    <span class="font">Entregar</span>
-                    <span class="font">Enviada</span>
-                </div>
-                <div class="div-result">
-                    <a class="font" target='_blank' rel='external' href='{{$ats->url}}'>Visualizar</a>
-                    <time class="font">{{$ats->data_entrega}}</time>
-                    <time class="font">{{$ats->data_entregue}}</time>
-            </div>
+    <div class="div-background">
+        @if ($ats != '')
+        <div class="links">
+            <a href="{{$ats->previousPageUrl()}}" class="fas fa-angle-left font"></a>
+            <a href="{{$ats->nextPageUrl()}}" class="fas fa-angle-right font"></a>
         </div>
-    </article>
-    @empty
-    <span class="empty font">Oops.. Nadinha!</span>
-    @endforelse
-    @if ($ats == '')
-    @else
+        @endif
+        @forelse ($ats as $ats)
+        <article class="div-form div-principal">
+            <span class="font">{{$ats->materia}}</span>
+                <div class='text'>
+                    <div class="div-span">
+                        <span class="font">Atividade</span>
+                        <span class="font">Entregar</span>
+                        <span class="font">Enviada</span>
+                    </div>
+                    <div class="div-result">
+                        <a class="font" target='_blank' rel='external' href='{{$ats->url}}'>Visualizar</a>
+                        <time class="font">{{$ats->data_entrega}}</time>
+                        <time class="font">{{$ats->data_entregue}}</time>
+                </div>
+            </div>
+        </article>
+        @empty
+        <span class="empty font">Oops.. Nadinha!</span>
+        @endforelse
+    </div>
+    @if ($ats != '')
     <div class="orderBy">
-        <form action="{{route('filtrar.filtrar_concluido')}}" method="post">
-            <legend class="font">Filtrar por</legend>
+        <form action="{{route('filtrar.filtrar_atribuido')}}" method="post">
+            <legend class="font">Filtrar por:</legend>
             <div>
                 <select require name="disc">
                     <option value="todas">Disciplinas</option>

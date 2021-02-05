@@ -55,4 +55,8 @@ mix.styles(
         'resources/js/autoLoadTheme.js'
         ,'public/js/autoLoadTheme.js'
     )
+    .js(
+        'resources/js/addClass.js'
+        ,'public/js/addClass.js'
+    )
     .version();

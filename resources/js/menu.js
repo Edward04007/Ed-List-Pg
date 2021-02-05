@@ -1,6 +1,6 @@
+/* Adicionando e removendo classes do menu infeiror para mostrar Div  */
 const atividade = document.querySelector('.subMenu')
 
-menu(atividade)
 function menu(atividade){
         document.querySelector('.button').addEventListener('click', () =>{
 
@@ -15,16 +15,17 @@ function menu(atividade){
             atividade.classList.remove('mostrar')
         })
 }
-
+menu(atividade)
+/*  Adicionando e removendo classes para mostrar menu lateral */
 const menuL = document.querySelector('.menu-lateral')
-menuLA(menuL)
 
 function menuLA(menuL){
     document.querySelector('.menu').addEventListener('click', () =>{
             menuL.classList.toggle('mostrar-menu')
         })
 }
-
+menuLA(menuL)
+/* Aplicando tema ao menu */
 const theme_defaul_menu  = document.querySelector('.menu-lateral');
 const theme_defaul_cont  = document.querySelector('.content');
 theme_menu(theme_defaul_menu, theme_defaul_cont );
@@ -52,6 +53,7 @@ function theme_menu(theme_defaul_menu, theme_defaul_cont ){
     })
 }
 
+/* Validação de qual tema foi definido como padrão */
 if(localStorage.getItem('theme')){
 
     theme_defaul_menu.classList.add('theme-dark-menu')

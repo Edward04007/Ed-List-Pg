@@ -30,9 +30,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/8544c965ee.js" crossorigin="anonymous"></script>
-    <script src="{{mix('js/menu.js')}}" defer></script>
-    <script src="{{mix('js/theme.js')}}" defer></script>
-    <script src="{{mix('js/autoLoadTheme.js')}}" defer></script>
+    <script src="{{mix('js/menu.js')}}" defer ></script>
+    <script src="{{mix('js/theme.js')}}" defer ></script>
+    <script src="{{mix('js/autoLoadTheme.js')}}" defer ></script>
+    <script src="{{mix('js/addClass.js')}}" defer ></script>
     @stack('js')
 </head>
 <body>
@@ -42,26 +43,26 @@
         </div>
         <nav class="menu-lateral">
             <ul>
-                <li class="fas fa-user font"><a class="font" href="{{Route('perfil.perfilShow')}}">Perfil</a></li>
-                <li  class="fas fa-video font"><a class="font" href="{{Route('record.recordShow')}}">Gravações</a></li>
-                <li class="fas fa-users font"><a class="font" href="{{Route('turma.turmaShow')}}">Turma</a></li>
-                <li class="fas fa-user-shield font"><a class="font" href="{{Route('admin.adminShow')}}">Admin</a></li>
+                <li class="fas fa-user font mark_05"><a class="font" href="{{Route('perfil.perfilShow')}}">Perfil</a></li>
+                <li  class="fas fa-video font mark_06"><a class="font" href="{{Route('record.recordShow')}}">Gravações</a></li>
+                <li class="fas fa-users font mark_07"><a class="font" href="{{Route('turma.turmaShow')}}">Turma</a></li>
+                <li class="fas fa-user-shield font mark_08"><a class="font" href="{{Route('admin.adminShow')}}">Admin</a></li>
                 <li class="fas fa-moon font mode_dark"><a class="font mode_dark">Modo Dark</a></li>
-                <li class="fas fa-sign-out-alt font"><a class="font" href="{{Route('lagout.lagout')}}">Sair</a></li>
+                <li class="fas fa-sign-out-alt font mark_09"><a class="font" href="{{Route('lagout.lagout')}}">Sair</a></li>
             </ul>
         </nav>
         <header class="header">
             <div class="subMenu div-form">
                 <span class="font">Atividades</span>
                 <div>
-                    <a class="font" rel='next' href="{{Route('fazer.lista_atribuida')}}">Atribuído</a>
-                    <a   class="font" rel='next' href="{{Route('feito.lista_concluido')}}">Concluído</a>
+                    <a class="font mark_04" rel='next' href="{{Route('fazer.lista_atribuida')}}">Atribuído</a>
+                    <a class="font mark_03" rel='next' href="{{Route('feito.lista_concluido')}}">Concluído</a>
                 </div>
             </div>
             <nav>
                 <img class="menu"  src='{{session('UsuarioFoto')}}'>
-                <span class="fas fa-book button"></span>
-                <a class="fas fa-house-user" href="{{Route('geral.index')}}"></a>
+                <span class="fas fa-book button mark_02"></span>
+                <a class="fas fa-house-user mark_01" href="{{Route('geral.index')}}"></a>
             </nav>
         </header>
     </div>
