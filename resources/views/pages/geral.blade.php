@@ -9,46 +9,50 @@
             <div class="div-form">
             <span class="font">Segunda-feira</span>
                 <ul>
-                    <li class="font">Física- 08:00 às 8:40</li>
-                    <li class="font">Espanhol- 10:50 às 11:30</li>
-                    <li class="font">História- 13:30 às 14:15</li>
-                    <li class="font">Educação Física- 16:30 às 17:00</li>
+                    <li class="font">Química - 08:00 ás 09:30</li>
+                    <li class="font">História - 10:00 ás 11:30</li>
+                    <li class="font">Matemática - 13:30 ás 15:00</li>
+                    <li class="font">Homero - 15:30 ás 17:00</li>
                 </ul>
             </div>
             <div class="div-form">
             <span class="font">Terça-feira</span>
                 <ul>
-                    <li class="font">Matemática- 8:00 às 9:30</li>
-                    <li class="font">Geografia- 10:50 às 11:30</li>
-                    <li class="font">Homero- 13:30 às 15:00</li>
-                    <li class="font">Homero- 15:30 às 17:00</li>
+                    <li class="font">Geografia - 08:00 ás 09:30</li>
+                    <li class="font">Israel - 10:00 ás 11:30</li>
+                    <li class="font">Felizardo - 13:30 ás 15:00</li>
+                    <li class="font">Homero- 15:30 ás 17:00</li>
                 </ul>
             </div>
             <div class="div-form">
             <span class="font">Quarta-feira</span>
                 <ul>
-                    <li class="font">Israel- 8:00 às 9:30</li>
-                    <li class="font">Israel- 10:00 às 11:30</li>
-                    <li class="font">Inglês Técnico- 13:00 às 14:00</li>
-                    <li class="font">Homero- 14:30 às 15:30</li>
-                    <li class="font">Formação p/cidadania- 16:00 às 17:00</li>
+                    <li class="font">Ed.Física - 08:00 ás 08:45</li>
+                    <li class="font">Sociologia - 08:45 ás 09:30</li>
+                    <li class="font">Redação - 10:00 ás 11:30</li>
+                    <li class="font">Espanhol - 13:30 ás 14:15</li>
+                    <li class="font">Inglês - 14:15 ás 15:00</li>
+                    <li class="font">Felizardo - 15:30 ás 17:00</li>
                 </ul>
             </div>
             <div class="div-form">
             <span class="font">Quinta-feira</span>
                 <ul>
-                    <li class="font">Inglês- 8:00 às 8:50</li>
-                    <li class="font">Química- 10:00 às 11:30</li>
-                    <li class="font">Português- 13:30 às 15:00</li>
-                    <li class="font">Biologia- 16:15 as 17:00</li>
+                    <li class="font">Física - 08:00 ás 09:30</li>
+                    <li class="font">Homero - 10:00 ás 11:30</li>
+                    <li class="font">Israel - 13:30 ás 15:00</li>
+                    <li class="font">Português - 15:30 ás 16:15</li>
+                    <li class="font">Projeto de vida - 16:15 ás 17:00</li>
                 </ul>
             </div>
             <div class="div-form">
             <span class="font">Sexta-feira</span>
                 <ul>
-                    <li class="font">Matemática- 8:00 às 9:30</li>
-                    <li class="font">Filosofia- 10:45 às 11:30</li>
-                    <li class="font">Sociologia- 16:30 às 17:00</li>
+                    <li class="font">Biologia - 08:00 ás 09:30</li>
+                    <li class="font">Português - 10:00 ás 11:30</li>
+                    <li class="font">Matemática - 13:30 ás 15:00</li>
+                    <li class="font">Filosofia - 15:30 ás 16:15</li>
+                    <li class="font">F.P Cidadania - 16:15 ás 17:00</li>
                 </ul>
             </div>
         </div>
