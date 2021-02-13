@@ -22,7 +22,16 @@ Route::get("/login", [LoginController::class, 'index'])->name('login.index');
 Route::get('/logout', [LoginController::class, 'lagout'])->name('lagout.lagout');
 
 
+
+
+
+
+
 Route::middleware('check.session')->group(function(){
+
+
+
+
 
 /* Rota para página inicial quando logado */
 Route::get("/geral", [GeralController::class, 'index'])->name('geral.index');
@@ -30,17 +39,26 @@ Route::get("/geral", [GeralController::class, 'index'])->name('geral.index');
 /* Rota para atualizar status da atividade */
 Route::put("/update/{id}",[AtividadesController::class,'update'])->name('update.update');
 
+
+
+
+
 /* Rota para página de atividades a fazer */
 Route::get("/atribuido", [AtividadesController::class,'lista_atribuida'])->name('fazer.lista_atribuida');
-
-/* Rota para página de atividades feitas */
-Route::get("/concluido", [AtividadesController::class,'lista_concluido'])->name('feito.lista_concluido');
 
 /* filtro por atividades atribuidas */
 Route::post("/filtrar/atribuido", [AtividadesController::class,'filtrar_atribuido'])->name('filtrar.filtrar_atribuido');
 
+/* Rota para página de atividades feitas */
+Route::get("/concluido", [AtividadesController::class,'lista_concluido'])->name('feito.lista_concluido');
+
 /* filtro por atividades concluidos */
 Route::post("/filtrar/concluido", [AtividadesController::class,'filtrar_concluido'])->name('filtrar.filtrar_concluido');
+
+
+
+
+
 
 /* Rota para página de perfil */
 Route::get("/perfil", [PerfilController::class,'perfilShow'])->name('perfil.perfilShow');
@@ -51,11 +69,21 @@ Route::post("/perfil/foto", [PerfilController::class,'FotoUpdate'])->name('perfi
 /* Rota para atualizar senha*/
 Route::post("/perfil/senha", [PerfilController::class,'SenhaUpdate'])->name('perfil.SenhaUpdate');
 
+
+
+
+
 /* Rota para página de vídeos gravados */
 Route::get("/record", [RecordController::class,'recordShow'])->name('record.recordShow');
 
 /* filtro por disciplina */
-Route::post("/filtrar/disciplina", [RecordController::class,'record_filtre'])->name('filtrar_disciplina.record_filtre');
+Route::post("/filtrar/record", [RecordController::class,'record_filtre'])->name('filtrar.record_filtre');
+
+
+
+
+
+
 
 /* Rota para página da turma */
 Route::get("/turma", [turmaController::class,'turmaShow'])->name('turma.turmaShow');

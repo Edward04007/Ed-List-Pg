@@ -31,7 +31,7 @@
     </div>
     @if ($listas_video != '')
     <div class="orderBy">
-        <form action="{{route('filtrar_disciplina.record_filtre')}}" method="post">
+        <form action="{{Route('filtrar.record_filtre')}}" method="post">
             <legend class="font">Filtrar por:</legend>
             <div>
                 <select require name="disc">

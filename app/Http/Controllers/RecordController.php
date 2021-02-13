@@ -16,7 +16,6 @@ class RecordController extends Controller
         join('tb_disciplina','pk_disciplina','fk_disciplina')->
         select('materia', 'fk_disciplina')->distinct()->get();
 
-
         return view('pages/record', compact('listas_videos','discs'));
 
     }
@@ -36,8 +35,6 @@ class RecordController extends Controller
             $discs = TB_VideoModel::
            join('tb_disciplina','pk_disciplina','fk_disciplina')->
            select('materia', 'fk_disciplina')->distinct()->get();
-
-           dd($discs);
 
             return view('pages/record', compact('listas_videos','discs'));
         }
