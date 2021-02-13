@@ -5,7 +5,7 @@
 @endpush
 @section('content')
     <div class="div-background">
-        @if ($ats != '')
+        @if ($ats->total() = 0)
         <div class="links">
             <a href="{{$ats->previousPageUrl()}}" class="fas fa-angle-left font"></a>
             <a href="{{$ats->nextPageUrl()}}" class="fas fa-angle-right font"></a>

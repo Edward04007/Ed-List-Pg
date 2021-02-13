@@ -14,15 +14,15 @@ class GeralController extends Controller{
     public function index(){
 
         $Atividades_total = TB_ListaModel::
-                where('fk_aluno', '=', session('UsuarioLogado'))->count();
+                where('fk_aluno', session('UsuarioLogado'))->count();
 
         $Atividades_atribuido = TB_ListaModel::
-                where('fk_aluno', '=', session('UsuarioLogado'))->
-                where('fk_status', '=', '1')->count();
+                where('fk_aluno', session('UsuarioLogado'))->
+                where('fk_status', '1')->count();
 
         $Atividades_concluido = TB_ListaModel::
-                where('fk_aluno', '=', session('UsuarioLogado'))->
-                where('fk_status', '=', '2')->count();
+                where('fk_aluno', session('UsuarioLogado'))->
+                where('fk_status', '2')->count();
 
         return view('pages/geral', compact('Atividades_total','Atividades_atribuido','Atividades_concluido'));
 

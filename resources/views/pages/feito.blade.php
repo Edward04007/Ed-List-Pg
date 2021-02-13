@@ -5,7 +5,7 @@
 @endpush
 @section('content')
     <div class="div-background">
-        @if ($ats != '')
+        @if ($ats->total() != 0)
         <div class="links">
             <a href="{{$ats->previousPageUrl()}}" class="fas fa-angle-left font"></a>
             <a href="{{$ats->nextPageUrl()}}" class="fas fa-angle-right font"></a>
@@ -39,7 +39,7 @@
                 <select require name="disc">
                     <option value="todas">Disciplinas</option>
                     @foreach ($discs as $disc)
-                    <option value="{{$disc->pk_disciplina}}">{{$disc->materia}}</option>
+                    <option value="{{$disc->fk_disciplina}}">{{$disc->materia}}</option>
                     @endforeach
                 </select>
                 @csrf
