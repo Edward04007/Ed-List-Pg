@@ -33,7 +33,7 @@
     </div>
     @if ($ats != '')
     <div class="orderBy">
-        <form action="{{route('filtrar.filtrar_atribuido')}}" method="post">
+        <form action="{{route('filtrar.filtrar_concluido')}}" method="post">
             <legend class="font">Filtrar por:</legend>
             <div>
                 <select require name="disc">
