@@ -28,7 +28,7 @@
             <figure></figure>
         </header>
         <section class="div-form">
-            <form method='POST' action="{{route('login.store')}}">
+            <form method='POST' action="{{Route('login.store')}}">
                 @csrf
                 <legend class="font">LOGIN</legend>
                  <input type="text" placeholder="Aluno" name='user' value="{{old('user')}}">

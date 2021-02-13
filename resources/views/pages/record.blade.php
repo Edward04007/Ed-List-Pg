@@ -11,17 +11,17 @@
             <a href="{{$listas_videos->nextPageUrl()}}" class="fas fa-angle-right font"></a>
         </div>
         @endif
-        @forelse ($listas_videos as $listas_video)
+        @forelse ($listas_videos as $listar_video)
         <article class="div-form div-principal">
-            <span class="font">{{$listas_video->materia}}</span>
+            <span class="font">{{$listar_video->materia}}</span>
             <div class='text'>
                 <div class="div-span">
                     <span class="font">Vídeo</span>
                     <span class="font">Do dia</span>
                 </div>
                 <div class="div-result">
-                    <a class="font" target='_blank' rel='external' href='{{$listas_video->url_video}}'>Assistir</a>
-                    <time class="font">{{$listas_video->data_gravado_em}}</time>
+                    <a class="font" target='_blank' rel='external' href='{{$listar_video->url_video}}'>Assistir</a>
+                    <time class="font">{{$listar_video->data_gravado_em}}</time>
                 </div>
             </div>
         </article>
@@ -29,9 +29,9 @@
         <span class="empty font">Oops.. Nadinha!</span>
         @endforelse
     </div>
-    @if ($listas_video != '')
+    @if ($listar_video != '')
     <div class="orderBy">
-        <form action="{{Route('filtrar.record_filtre')}}" method="post">
+        <form action="{{Route('filtrar.record_filtre')}}" method="POST">
             <legend class="font">Filtrar por:</legend>
             <div>
                 <select require name="disc">
