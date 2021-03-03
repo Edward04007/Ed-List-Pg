@@ -11,7 +11,7 @@ class TB_AlunoModel extends Model
     protected $table = 'tb_aluno';
 
     protected $fillable = [
-        'name',
+        'nome',
         'senha',
         'pk_aluno',
         'foto',

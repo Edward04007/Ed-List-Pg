@@ -8,7 +8,7 @@
     <meta name="author" content="Éverton - Ed">
     <meta name="copyright" content="© 2020 EdList">
     <title>EdList</title>
-    <link rel='manifest' href='{{asset('ed-manifest.json')}}'>
+    <link rel='manifest' href="{{asset('ed-manifest.json')}}">
     <link rel="icon" sizes="144x144" href="https://i.imgur.com/OWzvVWl.png">
     <link rel="icon" sizes="128x128" href="https://i.imgur.com/xmavN6k.png">
     <link rel="icon" sizes="96x96" href="https://i.imgur.com/fDjuvsI.png">

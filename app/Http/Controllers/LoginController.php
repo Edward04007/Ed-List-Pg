@@ -24,11 +24,11 @@ class LoginController extends Controller{
 
     public function store(StoreLoginInsert $request){
 
-        $tb_aluno = TB_AlunoModel::where('nome', $request-> user)->first();
+        $tb_aluno = TB_AlunoModel::where('nome', $request->user)->first();
 
         if($tb_aluno){
 
-            if(sha1($request-> pass) === $tb_aluno->senha){
+            if(sha1($request->pass) === $tb_aluno->senha){
 
                 $request->session()->put('UsuarioLogado', $tb_aluno->pk_aluno);
                 $request->session()->put('UsuarioNome', $tb_aluno->nome);

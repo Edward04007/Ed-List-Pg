@@ -60,14 +60,12 @@ class AdminController extends Controller
     public function insertAluno(Request $request){
         if(session('UsuarioLogado') == '1'){
 
-                $senha = sha1($request->passw);
-
             $insertAluno =  TB_AlunoModel::create([
-                'fk_aluno' => $request->url_foto,
-                'fk_disciplina' => $request->aluno_novo,
-                'fk_anexo' => $senha,
+                'foto' => $request->url_foto,
+                'nome' => $request->aluno_novo,
+                'senha' => sha1($request->passw),
             ]);
-
+            
             return back();
 
         }else{
