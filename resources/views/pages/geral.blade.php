@@ -77,4 +77,13 @@
                 </ul>
             </div>
         </div>
+        <div class='titles-session'><span class="font">Vídeos</span></div>
+        <div class='estatistica-div'>
+            <div class="div-form">
+            <span class="font">Total</span>
+                <ul>
+                    <li class="font">{{$videos_total}}</li>
+                </ul>
+            </div>
+        </div>
 @endsection

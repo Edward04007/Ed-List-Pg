@@ -7,8 +7,12 @@
     <div class="div-background">
         @if ($listas_videos->total() != 0)
         <div class="links">
+            @if ($listas_videos->previousPageUrl() != 0)
             <a href="{{$listas_videos->previousPageUrl()}}" class="fas fa-angle-left font"></a>
+            @endif
+            @if ($listas_videos->nextPageUrl() != 0)
             <a href="{{$listas_videos->nextPageUrl()}}" class="fas fa-angle-right font"></a>
+            @endif
         </div>
         @endif
         @forelse ($listas_videos as $listar_video)

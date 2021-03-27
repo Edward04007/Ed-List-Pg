@@ -7,8 +7,12 @@
     <div class="div-background">
         @if ($ats->total() != 0)
         <div class="links">
+            @if ($ats->previousPageUrl()!= 0)
             <a href="{{$ats->previousPageUrl()}}" class="fas fa-angle-left font"></a>
+            @endif
+            @if ($ats->nextPageUrl() != 0)
             <a href="{{$ats->nextPageUrl()}}" class="fas fa-angle-right font"></a>
+            @endif
         </div>
         @endif
         @forelse ($ats as $ats)

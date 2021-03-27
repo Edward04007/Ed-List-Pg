@@ -15,9 +15,11 @@
     border-radius: 0.7em;
     legend{
         margin-top: 0.2em;
+        font-weight: bold;
         text-align: center;
         white-space: nowrap;
         margin-bottom: 0.2em;
+        font-family: $roboto;
     }
 }
 .form-style:not(:last-child){
@@ -34,6 +36,7 @@ form{
         margin-top: 0.4em;
         padding-left: 0.4em;
         border-radius: 0.5em;
+        font-family: $roboto;
         background-color: $bg-input;
         border: solid 3px $bg-border;
     }
@@ -43,12 +46,14 @@ form{
         color: #3f3d3d;
         padding-left: 0.4em;
         border-radius: 0.5em;
+        font-family: $roboto;
         background-color: $bg-input;
         border: solid 3px $bg-border;
     }
     option{
         font-size: 1rem;
         color: #3f3d3d;
+        font-family: $roboto;
         background-color: $bg-input;
     }
     button{
@@ -57,6 +62,7 @@ form{
         cursor: pointer;
         font-size: 0.9rem;
         margin-top: 0.4em;
+        font-family: $roboto;
         border-radius: 0.5em;
         background-color: $bg-button-azul;
     }

@@ -22,11 +22,11 @@
     padding-top: 0.4em;
     align-items: center;
     border-radius: 0.7em;
-    font-family: $roboto;
     flex-direction: column;
     span{
         font-size: 1rem;
         font-weight: bold;
+        font-family: $roboto;
     }
 }
 .text{
@@ -38,6 +38,7 @@
     time{
         font-size: 1rem;
         margin-top: 0.4em;
+        font-family: $open-sans;
     }
     span{
         font-size: 1rem;
@@ -45,10 +46,12 @@
         margin-top: 0.4em;
         margin-right: 0.4em;
         padding-right: 0.4em;
+        font-family: $open-sans;
     }
     a{
         font-size: 1rem;
         margin-top: 0.4em;
+        font-family: $open-sans;
         text-decoration: underline;
     }
 }

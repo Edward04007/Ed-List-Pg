@@ -43,6 +43,10 @@ mix.styles(
         'resources/css/main_7.css'
         ,'public/css/main_7.css'
     )
+    .styles(
+        'resources/css/main_8.css'
+        ,'public/css/main_8.css'
+    )
     .js(
         'resources/js/menu.js'
         ,'public/js/menu.js'

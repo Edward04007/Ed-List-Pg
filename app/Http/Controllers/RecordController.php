@@ -10,7 +10,7 @@ class RecordController extends Controller
     public function recordShow(){
 
         $listas_videos = TB_VideoModel::select('materia', 'data_gravado_em', 'url_video')->
-        join('tb_disciplina','fk_disciplina','pk_disciplina')->paginate(4);
+        join('tb_disciplina','fk_disciplina','pk_disciplina')->orderByRaw('pk_video ASC')->paginate(4);
 
         $discs = TB_VideoModel::
         join('tb_disciplina','pk_disciplina','fk_disciplina')->
@@ -30,7 +30,7 @@ class RecordController extends Controller
             $listas_videos = TB_VideoModel:: where('fk_disciplina', $request->disc)->
             select('materia', 'data_gravado_em', 'url_video')->
             join('tb_disciplina','fk_disciplina','pk_disciplina')->
-            orderBy('materia')->paginate(4);
+            orderBy('materia')->orderByRaw('pk_video ASC')->paginate(4);
 
             $discs = TB_VideoModel::
            join('tb_disciplina','pk_disciplina','fk_disciplina')->

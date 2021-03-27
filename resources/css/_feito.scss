@@ -21,12 +21,12 @@
     margin-bottom: 1em;
     align-items: center;
     border-radius: 0.7em;
-    font-family: $roboto;
     flex-direction: column;
     span{
         font-size: 1rem;
         margin-top: 0.4em;
         font-weight: bold;
+        font-family: $roboto;
     }
 }
 .text{
@@ -34,19 +34,23 @@
     height: 70%;
     display: flex;
     align-items: center;
+    font-family: $open-sans;
     justify-content: center;
     time{
         font-size: 1rem;
         margin-top: 0.4em;
+        font-family: $open-sans;
     }
     span{
         font-size: 1rem;
         font-weight: bold;
-       padding-right: 0.4em;
+        padding-right: 0.4em;
+        font-family: $open-sans;
     }
     a{
         font-size: 1rem;
         margin-top: 0.4em;
+        font-family: $open-sans;
         text-decoration: underline;
     }
 }

@@ -39,6 +39,8 @@ Route::get("/geral", [GeralController::class, 'index'])->name('geral.index');
 /* Rota para atualizar status da atividade */
 Route::put("/update/{id}",[AtividadesController::class,'update'])->name('update.update');
 
+/* Rota para sobre */
+Route::get("/sobre",[GeralController::class,'sobre'])->name('sobre');
 
 
 

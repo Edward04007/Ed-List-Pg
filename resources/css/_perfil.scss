@@ -15,9 +15,11 @@
     border-radius: 0.7em;
     legend{
         margin-top: 0.2em;
+        font-weight: bold;
         text-align: center;
         white-space: nowrap;
         margin-bottom: 0.2em;
+        font-family: $roboto;
     }
 }
 .form-style:not(:last-child){
@@ -34,16 +36,19 @@ form{
         margin-top: 0.4em;
         padding-left: 0.4em;
         border-radius: 0.5em;
+        font-family: $roboto;
         background-color: $bg-input;
         border: solid 3px $bg-border;
     }
     button{
         width: 95%;
+        color: white;
         padding: 0.2em;
         cursor: pointer;
         font-size: 0.9rem;
         margin-top: 0.4em;
         border-radius: 0.5em;
+        font-family: $roboto;
         background-color: $bg-button-azul;
     }
 }

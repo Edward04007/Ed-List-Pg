@@ -18,6 +18,7 @@
             font-weight: bold;
             margin-right: 0.4em;
             white-space: nowrap;
+            font-family: $roboto;
             padding-bottom: 0.2em;
         }
         select{
@@ -25,12 +26,14 @@
             color: #3f3d3d;
             padding-left: 0.4em;
             border-radius: 0.5em;
+            font-family: $roboto;
             background-color: $bg-input;
-            border: solid 3px $bg-border;
+            border: solid 4px $bg-border;
         }
         option{
             font-size: 1rem;
             color: #3f3d3d;
+            font-family: $roboto;
             background-color: $bg-input;
         }
         button{
@@ -38,10 +41,11 @@
             height: 1.5em;
             padding: 0.2em;
             font-size: 1rem;
-            color: #3f3d3d;
+            color: #ffffff;
             margin-top: 0.4em;
             text-align: center;
             border-radius: 0.5em;
+            font-family: $roboto;
             background-color: $bg-button-azul;
         }
     }

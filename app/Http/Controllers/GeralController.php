@@ -24,7 +24,15 @@ class GeralController extends Controller{
                 where('fk_aluno', session('UsuarioLogado'))->
                 where('fk_status', '2')->count();
 
-        return view('pages/geral', compact('Atividades_total','Atividades_atribuido','Atividades_concluido'));
+        $videos_total = TB_VideoModel::all()->count();
 
+        return view('pages/geral', compact('Atividades_total','Atividades_atribuido','Atividades_concluido', 'videos_total'));
+
+    }
+
+    public function sobre(){
+
+        $user = session('UsuarioNome');
+        return view('pages/sobre', compact('user'));
     }
 }

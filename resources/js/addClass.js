@@ -41,8 +41,11 @@ function lateral_menu_mark(mark_1){
 
             localStorage.setItem('mark','.mark_08')
         })
-
         document.querySelector('.mark_09').addEventListener('click', () =>{
+
+            localStorage.setItem('mark','.mark_09')
+        })
+        document.querySelector('.mark_10').addEventListener('click', () =>{
 
             localStorage.setItem('mark','.mark_01')
         })
