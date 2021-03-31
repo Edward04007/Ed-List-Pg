@@ -4,19 +4,17 @@
 <link rel='stylesheet' type='text/css' media='screen' href="{{mix('css/main_5.css')}}">
 @endpush
 @section('content')
-    <div class="div-background">
-        @if ($listas_videos->total() != 0)
-        <div class="links">
-            @if ($listas_videos->previousPageUrl() != 0)
-            <a href="{{$listas_videos->previousPageUrl()}}" class="fas fa-angle-left font"></a>
-            @endif
-            @if ($listas_videos->nextPageUrl() != 0)
-            <a href="{{$listas_videos->nextPageUrl()}}" class="fas fa-angle-right font"></a>
-            @endif
-        </div>
+    <div class="links">
+        @if ($listas_videos->previousPageUrl() != null)
+        <a href="{{$listas_videos->previousPageUrl()}}" class="fas fa-angle-left font"></a>
         @endif
+        @if ($listas_videos->nextPageUrl() != null)
+        <a href="{{$listas_videos->nextPageUrl()}}" class="fas fa-angle-right font"></a>
+        @endif
+    </div>
+    <div class="div-background">
         @forelse ($listas_videos as $listar_video)
-        <article class="div-form div-principal">
+        <article class="div-form">
             <span class="font">{{$listar_video->materia}}</span>
             <div class='text'>
                 <div class="div-span">
@@ -35,7 +33,7 @@
     </div>
     @if ($listar_video != '')
     <div class="orderBy">
-        <form action="{{Route('filtrar.record_filtre')}}" method="POST">
+        <form action="{{Route('filtrar.record_filtre')}}" method="GET">
             <legend class="font">Filtrar por:</legend>
             <div>
                 <select require name="disc">

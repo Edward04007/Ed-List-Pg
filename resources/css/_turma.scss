@@ -8,16 +8,19 @@
     display: flex;
     padding: 0.8em;
     overflow: auto;
+    flex-wrap: wrap;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
     article{
         width: 7em;
         height: 9em;
         display: flex;
-        margin-top: 0.8em;
+        margin: 0.8em;
         align-items: center;
         border-radius: 0.7em;
         flex-direction: column;
+        justify-content: center;
         div{
             padding: 0.4em;
             img{

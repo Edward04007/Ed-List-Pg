@@ -4,19 +4,17 @@
 <link rel='stylesheet' type='text/css' media='screen' href="{{mix('css/main_3.css')}}">
 @endpush
 @section('content')
+<div class="links">
+    @if ($ats->previousPageUrl() != null)
+    <a href="{{$ats->previousPageUrl()}}" class="fas fa-angle-left font"></a>
+    @endif
+    @if ($ats->nextPageUrl() != null)
+    <a href="{{$ats->nextPageUrl()}}" class="fas fa-angle-right font"></a>
+    @endif
+</div>
     <div class="div-background">
-        @if ($ats->total() != 0)
-        <div class="links">
-            @if ($ats->previousPageUrl()!= 0)
-            <a href="{{$ats->previousPageUrl()}}" class="fas fa-angle-left font"></a>
-            @endif
-            @if ($ats->nextPageUrl() != 0)
-            <a href="{{$ats->nextPageUrl()}}" class="fas fa-angle-right font"></a>
-            @endif
-        </div>
-        @endif
         @forelse ($ats as $ats)
-        <form class="div-form div-principal" method='POST' action='{{Route('update.update', $ats->pk_lista)}}'>
+        <form class="div-form" method='POST' action='{{Route('update.update', $ats->pk_lista)}}'>
             @csrf
             @method('put')
             <legend class="font">{{$ats->materia}}</legend>
@@ -38,7 +36,7 @@
     </div>
     @if ($ats!= '')
     <div class="orderBy">
-        <form action="{{route('filtrar.filtrar_atribuido')}}" method="post">
+        <form action="{{route('filtrar.filtrar_atribuido')}}" method="GET">
             <legend class="font">Filtrar por:</legend>
             <div>
                 <select require name="disc">

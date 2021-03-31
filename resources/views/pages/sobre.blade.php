@@ -4,29 +4,28 @@
 <link rel='stylesheet' type='text/css' media='screen' href="{{mix('css/main_8.css')}}">
 @endpush
 @section('content')
-    <h1 class="title font">
+<main class="main">
+    <h1 class="font">
         Como surgiu o EdList?
     </h1>
-    <p class="paragrafo font">
-        Quando a pandemia chegou ao Brasil e as escolas adotaram o formato EAD, tive muita dificuldade para gerenciar o volume de atividades. A primeira alternativa que encontrei foi anotar tudo em bloco de notas, mas chegou um ponto que só bloco de notas não dava conta, ficava extremante desorganizado e extenso. Então pensei, "ora, faço o curso de informática, vou criar um sistema para gerenciar as atividades!".
-
+    <p class="font">
+        Criado e mantido por Éverton, o EdList surgiu com o objetivo de organizar e facilitar o acesso a atividades e material do curso técnico de informática.
     </p>
-    <p class="paragrafo font">
-        A ideia do nome veio da preguiça. Apenas peguei o meu apelido que o mesmo coloquei em mim e juntei com List. Traduzindo: EdList significa Éverton Lista.
-
+    <h2 class="font">Apoio</h2>
+    <p class="font">
+        Sem a ajuda de Jonas e Larissa, a plataforma nunca sairia do papel. Eles ajudaram com ideias e a testar a plataforma.
     </p>
-
-    <h2 class="title font">
+    <h2 class="font">
         Algumas coisas que você precisa saber sobre o EdList
     </h2>
-    <p class="paragrafo font">
-        A plaforma não armazena nenhum conteúdo, apenas redirecionamos.
+    <p class="font">
+        A plataforma não armazena nenhum conteúdo, apenas redirecionamos.
     </p>
-    <p class=" paragrafo font">
-        As datas de entrega quando não saõ definidas pelo professor,
-        é definidas pelo administrador.
+    <p class=" font">
+      Por padrão o prazo de entrega é até a próxima aula, caso o professor não defina.
     </p>
-    <p class="paragrafo font">
-        Como os professores aproveitam gravações de outras aulas, geralmente as datas são diferentes, por conveniência coloco a data referente ao curso de informática.
+    <p class="font">
+        Boa parte das gravações são de outras turmas, por isso a data da gravação é dinifida para o horário do curso de informática, para facilitar a busca.
     </p>
+</main>
 @endsection

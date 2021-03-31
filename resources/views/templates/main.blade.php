@@ -44,11 +44,13 @@
         <nav class="menu-lateral">
             <ul>
                 <li class="fas fa-user font mark_05"><a class="font" href="{{Route('perfil.perfilShow')}}">Perfil</a></li>
-                <li class="fas fa-video font mark_06"><a class="font" href="{{Route('record.recordShow')}}">Gravações</a></li>
                 <li class="fas fa-users font mark_07"><a class="font" href="{{Route('turma.turmaShow')}}">Turma</a></li>
-                <li class="fas fa-user-shield font mark_08"><a class="font" href="{{Route('admin.adminShow')}}">Adminstração</a></li>
-                <li class="fas fa-address-card font mark_09"><a class="font" href="{{Route('sobre')}}">Sobre</a></li>
+                <li class="fas fa-video font mark_06"><a class="font" href="{{Route('record.recordShow')}}">Gravações</a></li>
                 <li class="fas fa-moon font mode_dark"><a class="font mode_dark">Modo Escuro</a></li>
+                <li class="fas fa-address-card font mark_09"><a class="font" href="{{Route('sobre')}}">Sobre</a></li>
+                @if (session('UsuarioLogado') == 1)
+                <li class="fas fa-user-shield font mark_08"><a class="font" href="{{Route('admin.adminShow')}}">Adminstração</a></li>
+                @endif
                 <li class="fas fa-sign-out-alt font mark_10"><a class="font" href="{{Route('lagout.lagout')}}">Sair</a></li>
             </ul>
         </nav>

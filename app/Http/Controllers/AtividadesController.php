@@ -15,13 +15,17 @@ class AtividadesController extends Controller
             where('fk_status','1')->
             join('tb_disciplina','fk_disciplina','pk_disciplina')->
             join('tb_anexo','fk_anexo','pk_anexo')->
-            select('data_entrega','url','materia','pk_lista')->paginate(4);
+            select('data_entrega','url','materia','pk_lista')->
+            orderByDesc('pk_lista')->
+            simplePaginate(4);
 
             $discs = TB_ListaModel::
            where('fk_aluno', session('UsuarioLogado'))->
            where('fk_status','1')->
            join('tb_disciplina','pk_disciplina','fk_disciplina')->
-           select('materia', 'fk_disciplina')->distinct()->get();
+           select('materia', 'fk_disciplina')->
+           distinct()->
+           get();
 
             return view('pages/fazer', compact('ats','discs'));
     }
@@ -33,7 +37,8 @@ class AtividadesController extends Controller
             where('fk_status','2')->
             join('tb_disciplina','fk_disciplina','pk_disciplina')->
             join('tb_anexo','fk_anexo','pk_anexo')->
-            select('data_entrega','data_entregue','url','materia')->paginate(4);
+            select('data_entrega','data_entregue','url','materia')->orderByDesc('pk_lista')->
+            simplePaginate(4);
 
            $discs = TB_ListaModel::
            where('fk_aluno', session('UsuarioLogado'))->
@@ -60,19 +65,26 @@ class AtividadesController extends Controller
             return redirect()->route('fazer.lista_atribuida');
 
         }else{
+
             $ats = TB_ListaModel::
             where('fk_aluno', session('UsuarioLogado'))->
             where('fk_status','1')->
-            where('fk_disciplina',$request->disc)->
+            where('fk_disciplina',$request->query('disc'))->
             join('tb_disciplina','fk_disciplina','pk_disciplina')->
             join('tb_anexo','fk_anexo','pk_anexo')->
-            select('data_entrega','url','materia','pk_lista')->orderBy('materia')->paginate(4);
+            select('data_entrega','url','materia','pk_lista')->
+            orderByDesc('pk_lista')->
+            simplePaginate(4)->
+            withQueryString();
 
             $discs = TB_ListaModel::
-           where('fk_aluno', session('UsuarioLogado'))->
-           where('fk_status','1')->
-           join('tb_disciplina','pk_disciplina','fk_disciplina')->
-           select('materia', 'fk_disciplina')->distinct()->get();
+            where('fk_aluno', session('UsuarioLogado'))->
+            where('fk_status','1')->
+            join('tb_disciplina','pk_disciplina','fk_disciplina')->
+            select('materia', 'fk_disciplina')->
+            distinct()->
+            get();
+
 
             return view('pages/fazer', compact('ats','discs'));
         }
@@ -91,13 +103,18 @@ class AtividadesController extends Controller
             where('fk_disciplina',$request->disc)->
             join('tb_disciplina','fk_disciplina','pk_disciplina')->
             join('tb_anexo','fk_anexo','pk_anexo')->
-            select('data_entrega','data_entregue','url','materia')->orderBy('materia')->paginate(4);
+            select('data_entrega','data_entregue','url','materia')->
+            orderByDesc('pk_lista')->
+            simplePaginate(4)->
+            withQueryString();
 
             $discs = TB_ListaModel::
            where('fk_aluno', session('UsuarioLogado'))->
            where('fk_status','2')->
            join('tb_disciplina','pk_disciplina','fk_disciplina')->
-           select('materia', 'fk_disciplina')->distinct()->get();
+           select('materia', 'fk_disciplina')->
+           distinct()->
+           get();
 
             return view('pages/feito', compact('ats','discs'));
         }

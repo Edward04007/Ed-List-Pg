@@ -49,13 +49,13 @@ Route::get("/sobre",[GeralController::class,'sobre'])->name('sobre');
 Route::get("/atribuido", [AtividadesController::class,'lista_atribuida'])->name('fazer.lista_atribuida');
 
 /* filtro por atividades atribuidas */
-Route::post("/filtrar/atribuido", [AtividadesController::class,'filtrar_atribuido'])->name('filtrar.filtrar_atribuido');
+Route::get("/filtrar/atribuido", [AtividadesController::class,'filtrar_atribuido'])->name('filtrar.filtrar_atribuido');
 
 /* Rota para página de atividades feitas */
 Route::get("/concluido", [AtividadesController::class,'lista_concluido'])->name('feito.lista_concluido');
 
 /* filtro por atividades concluidos */
-Route::post("/filtrar/concluido", [AtividadesController::class,'filtrar_concluido'])->name('filtrar.filtrar_concluido');
+Route::get("/filtrar/concluido", [AtividadesController::class,'filtrar_concluido'])->name('filtrar.filtrar_concluido');
 
 
 
@@ -79,7 +79,7 @@ Route::post("/perfil/senha", [PerfilController::class,'SenhaUpdate'])->name('per
 Route::get("/record", [RecordController::class,'recordShow'])->name('record.recordShow');
 
 /* filtro por disciplina */
-Route::post("/filtrar/record", [RecordController::class,'record_filtre'])->name('filtrar.record_filtre');
+Route::get("/filtrar/record", [RecordController::class,'record_filtre'])->name('filtrar.record_filtre');
 
 
 
